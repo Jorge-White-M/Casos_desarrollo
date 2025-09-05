@@ -8,11 +8,11 @@ import jakarta.persistence.*;
 
 @Entity
 public class Conductor {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     private String nombre;
     private String correo;
 
@@ -39,7 +39,5 @@ public class Conductor {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    
-    
-    
+
 }

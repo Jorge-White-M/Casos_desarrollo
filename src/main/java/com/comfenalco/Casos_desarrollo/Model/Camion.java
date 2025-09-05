@@ -7,15 +7,15 @@ package com.comfenalco.Casos_desarrollo.Model;
 import jakarta.persistence.*;
 
 @Entity
-public class Camion {   
-    
+public class Camion {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     @Column(unique = true, nullable = false)
     private String placa;
-    
+
     @ManyToOne
     @JoinColumn(name = "conductor_id")
     private Conductor conductor;
@@ -43,7 +43,5 @@ public class Camion {
     public void setConductor(Conductor conductor) {
         this.conductor = conductor;
     }
-    
-    
-    
+
 }
